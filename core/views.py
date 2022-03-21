@@ -2,8 +2,13 @@ from rest_framework.views import APIView
 from .serializers import UserSerializer
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.response import Response
+from datetime import datetime
 from.models import User
+import pandas as pd
 import jwt, datetime
+import requests
+
+import json
 
 # Create your views here.
 
@@ -76,3 +81,30 @@ class UserView(APIView):
         serializer = UserSerializer(user)
         return Response(serializer.data)
 
+class DashboardAPI(APIView):
+    def get_cotacaoDolar(self):
+        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
+        retorno = requests.get(url)
+        if retorno.status_code==200:
+            cotacaoDolar = retorno.json()
+            self.valor = cotacaoDolar['USD']
+        else:
+            self.valor = 0
+
+    def get_cotacaoEuro(self):
+        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
+        retorno = requests.get(url)
+        if retorno.status_code==200:
+            cotacaoEuro = retorno.json()
+            self.valor = cotacaoEuro['EUR']
+        else:
+            self.valor = 0
+
+    def get_cotacaoBTC(self):
+        url = "https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL"
+        retorno = requests.get(url)
+        if retorno.status_code==200:
+            cotacaoBTC = retorno.json()
+            self.valor = cotacaoBTC['BTC']
+        else:
+            self.valor = 0

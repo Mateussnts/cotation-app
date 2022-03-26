@@ -1,0 +1,68 @@
+@import '../../styles/variaveis.scss';
+
+.home {
+    height: 100vh;
+    
+    .logo-home{
+        padding: 10px 80px;
+        box-shadow: 2px 1px 2em 3px #E0E0E0;
+
+        .logo{
+            cursor: pointer;
+        }
+        
+        .language{
+            float: right;
+            padding: 3px 20px;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+
+            p{
+                cursor: pointer;
+                padding: 4px 10px;
+                font-weight: bold;
+                float: right;
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    &__content {
+        height: 100%;
+        
+        &--image{
+            height: 50%;
+            max-width: 800px;
+            max-height:600px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            object-fit: cover;
+        }
+
+        &--form {
+            padding: 100px;
+            width: 100%;
+            height: 100%;
+            max-width: 50%;
+        }
+
+        .form{
+            margin-top: 30px;
+        }
+
+        .social {
+            width: 100%;
+            max-width: 50%;
+            margin: 45px auto 0;
+            &__link{
+                a{
+                    font-size: 2.0rem;
+                    color: $graySlogan;
+                }
+            }
+        }
+    }
+}

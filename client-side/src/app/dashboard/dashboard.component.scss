@@ -1,0 +1,120 @@
+@import '../../styles/variaveis.scss';
+
+.home {
+    height: 100vh;
+    background-color: whitesmoke;
+    letter-spacing: -0.04em;
+
+    /* navbar do dashboards */
+
+    .logo-home{
+        height: 9vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        box-shadow: 2px 1px 2em 3px #E0E0E0;
+
+        .logo{
+            cursor: pointer;
+            margin-left: 80px;
+        }
+        
+        .language{
+
+            margin-top: 10px;
+            margin-left: 700px;
+
+            img{
+                width: 35px;
+                height: 35px;
+            }
+
+            p{
+                cursor: pointer;
+                padding: 4px 10px;
+                font-weight: bold;
+                float: right;
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    /* container de card de moedas */
+
+    .container-moedas{
+        h3 {
+            margin: 40px 80px 20px 80px;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 36px;       
+        }
+
+        .container-flex{
+ 
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            .container-coin {
+                width: 369px;
+                height: 189px;
+                margin-right: 35px;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+                border-radius: 8px;
+                padding: 24px;
+                position: relative;
+
+                .id_moeda{
+                    width: 250px;
+                    float: left;  
+                    font-weight: 500;                  
+                    margin-top: 2%;
+                    color: $blackBasic;                   
+                }
+
+                .cifrao{
+
+                    margin-left: 10px;
+                    width: 250px;
+                    font-size: 18px;
+                    color: $graySlogan;
+             
+                    .valor-api{                 
+                        margin-left: 8px;
+                        font-size: 48px;
+                        color: $blackBasic;
+                    }
+                }
+
+                .name-coin{
+                    margin-top: 30px;
+                    font-size: 14px;
+                    color: $graySlogan;
+                }
+
+                .img-coin{
+                    width: 64px;
+                    height: 64px;
+                    float: right;
+                    margin-right: 2%;
+                }
+            }            
+        }
+    }
+
+    /* tabela variaçoes de cotação */
+
+    .container-cotacoes {
+        h3 {
+            margin: 40px 80px 20px 80px;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 36px;
+            border: 1px solid red
+            
+        }
+    }
+
+}

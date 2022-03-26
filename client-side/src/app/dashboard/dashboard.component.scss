@@ -1,13 +1,14 @@
 @import '../../styles/variaveis.scss';
 
 .home {
-    height: 100vh;
+    height: 100%;
     background-color: whitesmoke;
     letter-spacing: -0.04em;
 
     /* navbar do dashboards */
 
     .logo-home{
+        background-color: white;
         height: 9vh;
         width: 100vw;
         display: flex;
@@ -25,17 +26,21 @@
             margin-left: 700px;
 
             img{
+                margin-bottom: 7px;
                 width: 35px;
                 height: 35px;
             }
 
-            p{
-                cursor: pointer;
-                padding: 4px 10px;
+            .chg-idioma {
+                margin: 5px;
+                padding: 2px;
                 font-weight: bold;
-                float: right;
-                font-size: 15px;
+                color: $blackBasic;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                cursor: pointer;
             }
+
         }
 
     }
@@ -44,9 +49,9 @@
 
     .container-moedas{
         h3 {
-            margin: 40px 80px 20px 80px;
+            margin: 40px 80px 20px 70px;
             padding: 10px;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 36px;       
         }
 
@@ -58,7 +63,7 @@
             justify-content: center;
         
             .container-coin {
-                width: 369px;
+                width: 355px;
                 height: 189px;
                 margin-right: 35px;
                 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -107,14 +112,62 @@
     /* tabela variaçoes de cotação */
 
     .container-cotacoes {
+
+        margin: 35px 80px 20px 70px;
+        display: flex;
+        justify-content: space-between;
+
         h3 {
-            margin: 40px 80px 20px 80px;
-            padding: 10px;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 36px;
-            border: 1px solid red
+        }
+
+        .btn-dropdown {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            margin-right: 30px;
+            padding: 8px;
+            font-weight: 500;
+            color: $blackBasic;
+            border-radius: 5px;
+            width: 180px;
+            height: 40px;
+            border: 1px solid $blackBasic;
+            cursor: pointer;
             
+        }       
+    }
+    
+    .table-quotations{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        
+        table {
+            border-collapse: collapse;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            background-color: white;
+            text-align: left;
+            overflow: hidden;
+            border-radius: 8px;
+
+            thead {
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            th {
+                padding: 1rem 4.5rem;
+                font-weight: 500;
+                color: $graySlogan;
+            }
+
+            td {
+                padding: 1rem 4.5rem;
+                border-bottom: 2px;
+            }
+
+            a{
+                text-decoration: none;
+            }
         }
     }
-
 }

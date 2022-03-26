@@ -4,7 +4,10 @@
         <img src="../../assets/login/logos.svg" alt="" class="logo">
         <div class="language">
             <img src="../../assets/login/brasil.png" alt="">
-            <p>PT-BR</p>
+            <select class="chg-idioma">
+                <option disable selected>PT-BR</option>
+                <option value="English">EN-US</option>
+            </select>
         </div>
     </div>
 
@@ -18,28 +21,75 @@
                 <h6 class="id_moeda">USD / BRL</h6>
                 <img class="img-coin" src="../../assets/login/Cards/Coin BRL/bold.png" alt="">
                 <h6 class="cifrao">R$ <span class="valor-api">valor_api</span></h6>
-                <h6 class="name-coin">Dolar turismo</h6>
+                <h6 class="name-coin">Dólar turismo</h6>
             </div>
             <div class="container-coin">
                 <h6 class="id_moeda">BTC / EUR</h6>
                 <img class="img-coin" src="../../assets/login/Cards/Coin BTC/bold.png" alt="">
                 <h6 class="cifrao">R$ <span class="valor-api">valor_api</span></h6>
-                <h6 class="name-coin">Euro</h6>
+                <h6 class="name-coin">Euro - EUR</h6>
             </div>
             <div class="container-coin">
                 <h6 class="id_moeda">BTC / USD</h6>
                 <img class="img-coin" src="../../assets/login/Cards/Coin BTC/bold.png" alt="">
                 <h6 class="cifrao">R$<span class="valor-api">4241,60</span></h6>
-                <h6 class="name-coin">Bitcoin</h6>
+                <h6 class="name-coin">Bitcoin - BTC</h6>
             </div>
         </div>
     </div>
 
-    <div class="cotacoes">
+    <div>
         <div class="container-cotacoes">
             <h3>Cotações</h3>
+            <select class="btn-dropdown">
+                <option disable selected>Dólar americano</option>
+                <option value="Euro">Euro - EUR</option>
+                <option value="Bitcoin">Bitcoin - BTC</option>
+            </select>
         </div>
-
+        <div class="table-quotations">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Icone</th>
+                        <th>Moeda</th>
+                        <th>Mínima</th>
+                        <th>Maxima</th>
+                        <th>Variação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../../assets/login/Cards/Coin BRL/bold.png" alt=""></td>
+                        <td><p>Dolar Americano <span>data_api</span></p></td>
+                        <td><p>api_min</p></td>
+                        <td><p>api_max</p></td>
+                        <td><p class="status status_var">positive_var</p></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../assets/login/Cards/Coin BRL/bold.png" alt=""></td>
+                        <td><p>Dolar Americano <span>data_api</span></p></td>
+                        <td><p>api_min</p></td>
+                        <td><p>api_max</p></td>
+                        <td><p class="status status_var">negative_var</p></td>
+                    </tr>
+                    <tr>
+                        <td><img src="../../assets/login/Cards/Coin BRL/bold.png" alt=""></td>
+                        <td><p>Dolar Americano <span>data_api</span></p></td>
+                        <td><p>api_min</p></td>
+                        <td><p>api_max</p></td>
+                        <td><p class="status status_var">negative_var</p></td>                    
+                    </tr>
+                    <tr>
+                        <td><img src="../../assets/login/Cards/Coin BRL/bold.png" alt=""></td>
+                        <td><p>Dolar Americano <span>data_api</span></p></td>
+                        <td><p>api_min</p></td>
+                        <td><p>api_max</p></td>
+                        <td><p class="status status_var">positive_var</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </section>

@@ -2,29 +2,38 @@
 
 .home {
     height: 100vh;
+    background-color: whitesmoke;
     
     .logo-home{
-        padding: 10px 80px;
+        height: 9vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
         box-shadow: 2px 1px 2em 3px #E0E0E0;
 
         .logo{
             cursor: pointer;
+            margin-left: 80px;
         }
         
         .language{
-            float: right;
-            padding: 3px 20px;
+            margin-top: 10px;
+            margin-left: 700px;
+            
             img{
+                margin-bottom: 7px;
                 width: 35px;
                 height: 35px;
             }
 
-            p{
-                cursor: pointer;
-                padding: 4px 10px;
+            .chg-idioma {
+                margin: 5px;
+                padding: 2px;
                 font-weight: bold;
-                float: right;
-                font-size: 15px;
+                color: $blackBasic;
+                border-radius: 5px;
+                border: 1px solid transparent;
+                cursor: pointer;
             }
         }
 

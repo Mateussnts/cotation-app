@@ -46,6 +46,32 @@
             width: 100vw;
             height: 91vh;
             background-size: cover;
+
+            .texto-redirect {
+                margin: 200px auto 10px;
+                width: 33%;
+                display: flex;
+                text-align: center;
+                color: white;
+                font-size: 30px;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+                
+            .cleiton {
+                margin: 0px 250px;
+                width: 150px;
+                height: 75px;
+                border: none;
+                cursor: pointer;
+                font-weight: bold;
+                border-radius: 10px;
+                
+                &:hover{
+                    background-color: whitesmoke;
+                    box-shadow: 2px 1px 0.5rem 0.5px $grayColor;
+                }                          
+            }
         }
 
         &--form {
@@ -56,13 +82,16 @@
         }
 
         .social {
+
+            list-style-type: none;
             width: 100%;
-            max-width: 50%;
-            margin: 25px auto 0;
+            max-width: 90%;
+            padding: 0px;
+            margin: 30px auto 0px;
             &__link{
                 a{
                     font-size: 2.0rem;
-                    color: $graySlogan;
+                    color: $graySlogan;                  
                 }
             }
         }

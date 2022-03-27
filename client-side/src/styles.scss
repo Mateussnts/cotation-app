@@ -88,3 +88,20 @@ button {
         }
     }
 }
+
+.status{
+    border-radius: 5px;
+    //background-color:
+    padding: 0.2rem 1rem;
+    text-align: center;
+
+    &-positive {
+        background-color: $mainColor;
+        color: $blackBasic;
+    }
+
+    &-negative {
+        background-color: $grayColor;
+        color: $blackBasic;
+    }
+}

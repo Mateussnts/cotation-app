@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import  { Router } from '@angular/router';
+import { AuthService } from 'src/authService';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,9 +9,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  signup(nome: string, email: string, password: string){
+    this.authService.signup(nome, email, password).subscribe(
+      success => this.router.navigate(['login']));
+  }
 }
+

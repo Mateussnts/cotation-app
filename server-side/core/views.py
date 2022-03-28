@@ -1,14 +1,15 @@
-from rest_framework.views import APIView
-from .serializers import UserSerializer
+from datetime import datetime
+
+import datetime
+import jwt
+import requests
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.response import Response
-from datetime import datetime
-from.models import User
-import pandas as pd
-import jwt, datetime
-import requests
+from rest_framework.views import APIView
 
-import json
+from .models import User
+from .serializers import UserSerializer
+
 
 # Create your views here.
 
@@ -87,7 +88,7 @@ class DashboardAPI(APIView):
         retorno = requests.get(url)
         if retorno.status_code==200:
             cotacaoDolar = retorno.json()
-            self.valor = cotacaoDolar['USD']
+            self.valor = cotacaoDolar['USD']['bid']
         else:
             self.valor = 0
 
@@ -96,7 +97,7 @@ class DashboardAPI(APIView):
         retorno = requests.get(url)
         if retorno.status_code==200:
             cotacaoEuro = retorno.json()
-            self.valor = cotacaoEuro['EUR']
+            self.valor = cotacaoEuro['EUR']['bid']
         else:
             self.valor = 0
 
@@ -105,6 +106,6 @@ class DashboardAPI(APIView):
         retorno = requests.get(url)
         if retorno.status_code==200:
             cotacaoBTC = retorno.json()
-            self.valor = cotacaoBTC['BTC']
+            self.valor = cotacaoBTC['BTC']['bid']
         else:
             self.valor = 0
